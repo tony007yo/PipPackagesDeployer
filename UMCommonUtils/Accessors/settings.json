@@ -1,0 +1,208 @@
+{
+   "_comment": " Structure: 'block_name' : { 'setting_name' : { 'def' : 'default_value' [, 'env' : 'env_name'] } } ",
+
+   "logs_paths" : {
+      "app"  : { "def" : "", "env" : "DJANGO_LOG" },
+      "wsgi" : { "def" : "", "env" : "WSGI_LOG" }
+   },
+
+   "black_overlord" : {
+      "name"   : { "def" : "", "env" : "BLACK_OVERLORD_NAME" },
+      "domain" : { "def" : "", "env" : "BLACK_OVERLORD_DOMAIN" },
+      "pass"   : { "def" : "", "env" : "BLACK_OVERLORD_PASS" }
+   },
+
+   "chart_meta" : {
+      "min_lod" : { "def" : 0 },
+      "max_lod" : { "def" : 6 }
+   },
+
+   "git_repo" : {
+      "url"        : { "def" : "", "env" : "UNIDATA_DB_URL" },
+      "root"       : { "def" : "", "env" : "UNIDATA_REPO" },
+
+      "def_branch" : { "def" : "master" },
+
+      "test_mode" : { "def" : "false" }
+   },
+
+   "features": {
+      "git.pull":   { "def" :  "True",  "env": "FEATURES_GIT_PULL"   },
+      "git.push":   { "def" :  "True",  "env": "FEATURES_GIT_PUSH"   },
+      "git.revert": { "def" :  "True",  "env": "FEATURES_GIT_REVERT" },
+      "git.reset":  { "def" :  "False", "env": "FEATURES_GIT_RESET"  }
+   },
+
+   "chart_files" : {
+      "root" : { "def" : "", "env" : "UNIDATA_CHARTS" },
+
+      "backup_root" : { "def" : "", "env" : "UNIDATA_CHARTS_BACKUP" }
+   },
+
+   "s57_charts_cache" : {
+      "root" : { "def" : "", "env" : "UNIDATA_CHARTS_CACHE" },
+
+      "index_file_fmt" : { "def" : "charts_cache_index{}{}.json" },
+
+      "intermediate_subdir" : { "def" : "ChartsCache" },
+      "unc_subdir"          : { "def" : "Unc" },
+      "utt_subdir"          : { "def" : "Utt" },
+
+      "chartitem_raw_subdir" : { "def" : "ChartItemRaw" },
+      "chartitem_corr_subdir" : { "def" : "ChartItemCorr" }
+   },
+
+   "tx_charts" : {
+      "root"      : { "def" : "\\\\votts-unidata\\in_out\\ChartsForUnidata\\Test\\Tx97", "env" : "TX_ROOT" },
+      "agency"    : { "def" : "TX" },
+      "chart_ext" : { "def" : ".CRT" }
+   },
+
+   "world_atlas": {
+      "root": { "def" : "", "env" : "WA_ROOT_DIR" },
+      "tx_collection": { "def" : "", "env" : "WA_TX_COLLECTION" },
+      "build_info": { "def" : "", "env" : "WA_BUILD_INFO" },
+      "build_dir": { "def" : "", "env" : "WA_BUILD_DIR" }
+   },
+
+   "crt_check": {
+      "exe":  { "def": "C:\\CrtChecker\\crtCheck.exe", "env": "CRT_CHECK_EXE"},
+      "logs": { "def": "C:\\CrtChecker\\Logs", "env" : "CRT_CHECK_LOGS" }
+   },
+
+   "bathymetry_cache" : {
+      "root" : { "def" : "", "env" : "BATHYMETRY_CACHE" },
+      "cache_folder_ttl" : { "def" : "259200" }
+   },
+
+   "wms_cache" : {
+      "root" : { "def" : "", "env" : "WMS_CACHE" },
+
+      "charts_subdir" : { "def" : "Charts" },
+      "utt_subdir"    : { "def" : "Utt" }
+   },
+
+   "tx_charts_cache" : {
+      "root" : { "def" : "", "env" : "TX_CHARTS_CACHE" }
+   },
+
+   "chart_data" : {
+      "root" : { "def" : "", "env" : "UNIDATA_CHARTS_DATA" }
+   },
+
+   "ports" : {
+      "bathymetry" : { "def" : "", "env" : "PORTS_BATHYMETRY_CHARTS" },
+      "sync_dir": { "def" : "", "env" : "PORTS_SYNC_DIR" }
+   },
+
+   "sandbox" : {
+      "root" : { "def" : "", "env" : "SANDBOX_ROOT" },
+
+      "user_dir_fmt" : { "def" : "{}_sandbox" }
+   },
+
+   "task_executor" : {
+      "url" : { "def" : "http://localhost:9009", "env" : "TASK_EXECUTOR_URL" },
+
+      "data_temp" : { "def" : "", "env" : "TASK_DATA_TEMP" },
+
+      "test_mode" : { "def" : false }
+   },
+
+   "idxs" : { "def" : "", "env" : "IDXS" },
+
+   "intermediate" : {
+      "root" : { "def" : "", "env" : "UNIDATA_INTERMEDIATE" }
+   },
+
+   "notifications" : {
+      "root" : { "def" : "", "env" : "UNIDATA_NOTIFICATIONS" },
+
+      "msteams_webhook" : { "def" : "", "env" : "MSTEAMS_WEBHOOK" }
+   },
+
+   "build_areas" : {
+      "root" : { "def" : "", "env" : "UNIDATA_BUILD_AREAS" }
+   },
+
+   "user_defined_areas" : {
+      "root" : { "def" : "", "env" : "UNIDATA_USER_DEFINED_AREAS" }
+   },
+
+   "deploy" : {
+      "exe" : { "def" : "C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe", "env" : "MS_DEPLOY_EXE" }
+   },
+
+   "unidata_artifactory" : {
+      "artifactory_url"       : { "def" : "https://artifactory.transas.com/artifactory", "env": "ARTIFACTORY_API_URL" },
+      "artifactory_username"  : { "def": "", "env": "ARTIFACTORY_API_USERNAME" },
+      "artifactory_token"     : { "def": "", "env": "ARTIFACTORY_API_TOKEN" },
+      "artifactory_repo_name" : { "def" : "Unidata.Artifacts", "env": "ARTIFACTORY_UNIDATA_REPO_NAME" },
+      "artifactory_connect_timeout" : { "def" :  60, "env": "ARTIFACTORY_CONNECT_TIMEOUT" },
+      "artifactory_read_timeout"    : { "def" : 600, "env": "ARTIFACTORY_READ_TIMEOUT" },
+      "artifactory_retry_count"     : { "def" :   3, "env": "ARTIFACTORY_RETRY_COUNT" }
+   },
+
+   "fos_wms_autotest": {
+      "host" : { "def" : "https://fvo-builder.transas.com", "env" : "FOS_JENKINS_HOST" },
+      "user" : { "def" : "dv_bot", "env" : "FOS_JENKINS_USER"},
+      "token": { "def" : "", "env" : "FOS_JENKINS_TOKEN"},
+      "job_name": { "def": "WMS/job/TWMS_Autotest", "env": "FOS_WMS_TEST_JOB_NAME" },
+      "job_token": { "def": "", "env": "FOS_WMS_TEST_JOB_TOKEN" },
+      "fos_cloud_test" : {
+         "wms_test_job_url": { "def": "http://giswms-test.transas.com/", "env" : "FOS_TEST_WMS_URL" }
+      },
+      "fos_cloud_prod" : {
+         "wms_test_job_url": { "def": "http://giswms.transas.com/", "env" : "FOS_TEST_WMS_URL" }
+      }
+   },
+
+   "postgres_wfs" : {
+      "binaries_path" : { "def" : "", "env" : "POSTGRESQL_BINARIES_PATH" },
+      "local" : {
+         "host" : { "def" : "localhost", "env" : "LOCAL_POSTGRES_HOST" },
+         "port" : { "def" : "5433" , "env" : "LOCAL_POSTGRES_PORT"},
+         "database_name" : { "def" : "wfs_prepare" , "env" : "LOCAL_DB_NAME"},
+         "user_name" : { "def" : "postgres" , "env" : "LOCAL_USER_NAME"},
+         "user_password": { "def" : "", "env" : "LOCAL_POSTGRES_PWD" }
+      },
+      "fos_cloud_test" : {
+         "host" : { "def" : "test-unidata.postgres.database.azure.com" },
+         "port" : { "def" : "5432" },
+         "database_template_name" : { "def" : "unidata_wfs_template" },
+         "user_name" : { "def" : "unidata@test-unidata" },
+         "user_password" : { "def" : "", "env" : "REMOTE_POSTGRES_TEST_PWD" }
+      },
+      "fos_cloud_prod" : {
+         "host" : { "def" : "prod-unidata.postgres.database.azure.com" },
+         "port" : { "def" : "5432" },
+         "database_template_name" : { "def" : "unidata_wfs_template" },
+         "user_name" : { "def" : "unidata@prod-unidata" },
+         "user_password" : { "def" : "", "env" : "REMOTE_POSTGRES_PROD_PWD" }
+      }
+   },
+
+   "szip" : {
+      "executable"         : { "def" : "C:\\Program Files\\7-Zip\\7z.exe", "env": "SZIP_EXEC_PATH" },
+      "format"             : { "def" :  "zip", "env": "SZIP_FILE_FORMAT" },
+      "compression_method" : { "def" : "LZMA", "env": "SZIP_COMP_METHOD" },
+      "compression_level"  : { "def" :    "5", "env": "SZIP_COMP_LEVEL"  }
+   },
+
+   "pipeline_disk_space_requirements" : {
+      "utt" : { "def" : "6", "env" : "UTT_DISK_SPACE_REQ" },
+      "wfs" : { "def" : "6", "env" : "WFS_DISK_SPACE_REQ" },
+      "ci_air" : { "def" : "2", "env" : "CI_AIR_DISK_SPACE_REQ" },
+
+      "threshold" : { "def" : "4", "env" : "THRESHOLD_DISK_SPACE_REQ" },
+      "percent_threshold" : { "def" : "0", "env" : "PERCENT_THRESHOLD_DISK_SPACE_REQ" },
+
+      "atlas" : { "def" : "40", "env" : "ATLAS_DISK_SPACE_REQ" }
+   },
+
+   "endpoints" : { "def": {}, "env" : "UNIDATA_ENDPOINTS" },
+
+   "log_level" : { 
+      "umat" : { "def" : "DEBUG", "env" : "UMAT_LOG_LEVEL" }
+   }
+}

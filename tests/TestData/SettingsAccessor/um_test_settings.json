@@ -1,0 +1,99 @@
+{
+   "_structure_comment": " Structure: 'block_name' : { 'setting_name' : { 'def' : 'default_value' [, 'env' : 'env_name'] } } ",
+
+   "black_overlord" : {
+      "name"   : { "def" : "dv_bot" }
+      },
+
+   "git_repo" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\GitRepo" },
+
+      "test_mode" : { "def" : true }
+   },
+
+   "features": {
+      "git.pull":   { "def" :  "True", "env": "FEATURES_GIT_PULL"   },
+      "git.push":   { "def" :  "True", "env": "FEATURES_GIT_PUSH"   },
+      "git.revert": { "def" :  "True", "env": "FEATURES_GIT_REVERT" },
+      "git.reset":  { "def" :  "True", "env": "FEATURES_GIT_RESET"  }
+   },
+
+   "chart_files" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\ChartsFiles" },
+
+      "backup_root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\ChartsBackup" }
+   },
+
+   "chart_data" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\ChartsData" }
+   },
+
+   "charts_updates" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\ChartsUpdates" },
+
+      "permit_zip_password" : { "def" : "%CHARTS_UPDATES_PASS%" },
+
+      "s63_util_exe" : { "def" : "%TEST_WORKSPACE%\\Repository\\S63Util\\S63Util.exe" }
+   },
+
+   "ports" : {
+      "bathymetry" : { "def" : "%TEST_WORKSPACE%\\test_temp\\PortsBathymetryCharts" }
+   },
+
+   "sandbox" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\Sandbox" }
+   },
+
+   "umake" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\Umake" }
+   },
+
+   "wms_cache" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\WMSCache"}
+   },
+
+   "s57_charts_cache" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\ChartsCache" }
+   },
+
+   "task_executor" : {
+      "data_temp" : { "def" : "%TEST_WORKSPACE%\\test_temp\\TasksData" },
+
+      "test_mode" : { "def" : true }
+   },
+
+   "idxs": { "def" : "%TEST_WORKSPACE%\\test_temp\\idxs" },
+
+   "intermediate" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\Intermediate" }
+   },
+
+   "notifications" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\Notifications" }
+   },
+
+   "build_areas" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\BuildAreas" }
+   },
+
+   "world_atlas": {
+      "root": { "def" : "%TEST_WORKSPACE%\\test_temp\\WorldAtlas" },
+      "tx_collection": { "def" : "%TEST_WORKSPACE%\\test_temp\\WorldAtlas\\TX97" },
+      "build_info": { "def" : "%TEST_WORKSPACE%\\test_temp\\WorldAtlas\\BuildInfo" },
+      "build_dir": { "def" : "%TEST_WORKSPACE%\\test_temp\\WorldAtlas\\BuildFiles" }
+   },
+   
+   "tx_charts" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\WorldAtlas\\TX97" }
+   },
+   
+   "tx_charts_cache" : {
+      "root" : { "def" : "%TEST_WORKSPACE%\\test_temp\\TxChartsCache" }
+   },
+
+   "test_config" : {
+      "def_test" : { "def" : "prefix_%TEST_CONFIG_VAL%_postfix" },
+      "env_test" : { "def" : "", "env" : "TEST_CONFIG_VAL" },
+      "absent_test" : { "def" : "%TEST_CONFIG_VAL_ABSENT%" }
+   }
+}

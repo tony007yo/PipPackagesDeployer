@@ -1,0 +1,11 @@
+pytest
+jsonmerge
+concurrent_log_handler
+importlib-metadata
+pathlib2
+starlette
+opencensus
+opencensus-ext-azure
+transas-legend-charts-manager==1.0.*
+typing
+glob2
